@@ -1,0 +1,50 @@
+# ArchaicHopper 5.0 - configuration baseline compatible with FoliaHopper 5.0
+# Batch size is a maximum, not a guarantee: available items and destination space apply.
+tick-cooldown: 4
+batch-size: 32
+transfer:
+  use-allowed-types: true
+  batch-allowed-types:
+    - CHEST
+    - TRAPPED_CHEST
+    - COPPER_CHEST
+    - BARREL
+    - HOPPER
+    - SHULKER_BOX
+    - CRAFTER
+    - DROPPER
+    - DISPENSER
+    - FURNACE
+    - BLAST_FURNACE
+    - SMOKER
+    - CHEST_MINECART
+    - HOPPER_MINECART
+blocked-retry-cycles: 2
+debug: false
+tps-throttle:
+  enabled: true
+  threshold: 18.0
+  halt-below: 16.0
+chunk-heat:
+  enabled: true
+  window-seconds: 10
+  threshold: 10000
+  min-batch-factor: 0.25
+special-blocks:
+  COMPOSTER: plugin
+  BREWING_STAND: plugin
+  DECORATED_POT: plugin
+  CHISELED_BOOKSHELF: plugin
+  JUKEBOX: true
+  LECTERN: true
+  CAMPFIRE: true
+  SOUL_CAMPFIRE: true
+  BEEHIVE: true
+  BEE_NEST: true
+vanilla-hoppers-at-special-blocks: true
+vanilla-hoppers-at-comparators: true
+sorter-fast-mode:
+  enabled: true
+  moves-per-cycle: 4
+special-handling:
+  moves-per-cycle: 10
